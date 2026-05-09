@@ -16,6 +16,8 @@ services:
 
   postgres:
     image: postgres:16-alpine
+    container_name: dockhand-db
+    restart: unless-stopped
     environment:
       POSTGRES_USER: dockhand
       POSTGRES_PASSWORD: changeme
