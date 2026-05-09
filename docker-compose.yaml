@@ -7,12 +7,12 @@ services:
     ports:
       - "8200:3000"
     environment:
-      DATABASE_URL: postgres://dockhand:changeme@postgres:5432/dockhand      
+      DATABASE_URL: postgres://dockhand:changeme@postgres:5432/dockhand
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./dockhand_data:/app/data
     depends_on:
-      - postgres      
+      - postgres
 
   postgres:
     image: postgres:16-alpine
